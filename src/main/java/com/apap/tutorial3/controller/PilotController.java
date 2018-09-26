@@ -51,10 +51,16 @@ public class PilotController {
 	public String pathView(@PathVariable Optional<String> licenseNumber, Model model){
 		if (licenseNumber.isPresent()) {
 			PilotModel archive = pilotService.getPilotDetailByLicenseNumber(licenseNumber.get());
-			model.addAttribute("pilot", archive);
-			return "view-pilot";
+			
+			if(archive == null) {
+				model.addAttribute("lisensi", licenseNumber.get());
+				return "error-view-pilot";
+			} else {
+				model.addAttribute("pilot", archive);
+				return "view-pilot";
+			}
 		} else {
-			model.addAttribute("lisensi", licenseNumber);
+			model.addAttribute("lisensi", licenseNumber.get());
 			return "error-view-pilot";
 		}
 	}
@@ -63,10 +69,16 @@ public class PilotController {
 	public String updateFlyHour(@PathVariable Optional<String> licenseNumber, @PathVariable Optional<Integer> flyHour, Model model) {
 		if (licenseNumber.isPresent()) {
 			PilotModel archive = pilotService.updatePilotFlyHour(licenseNumber.get(), flyHour.get());
-			model.addAttribute("pilot", archive);
-			return "view-pilot-updated";
+			
+			if(archive == null) {
+				model.addAttribute("lisensi", licenseNumber.get());
+				return "error-update-flyHour";
+			} else {
+				model.addAttribute("pilot", archive);
+				return "view-pilot-updated";
+			}
 		} else {
-			model.addAttribute("lisensi", licenseNumber);
+			model.addAttribute("lisensi", licenseNumber.get());
 			return "error-update-flyHour";
 		}
 	}
