@@ -1,0 +1,30 @@
+Write Up Tutorial 3
+Muhammad Erlangga Rianto
+1506730103
+
+localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
+Pertanyaan 1​: apakah hasilnya? Jika error, tuliskan penjelasan Anda.
+jawaban: muncul halaman yang memberi informasi bahwa "Data Berhasil Ditambahkan". Objek pilot baru sudah dibuat.
+
+localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono
+Pertanyaan 2: ​apakah hasilnya? Jika error, tuliskan penjelasan Anda
+jawaban: muncul pesan error "Required Integer parameter 'flyHour' is not present". Parameter flyHour yang dibutuhkan tidak dipassing ke controller.
+	
+localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
+localhost:8080/pilot/view?licenseNumber=1234
+Pertanyaan 3​: apakah data Pilot tersebut muncul? Jika tidak, mengapa?
+jawaban: muncul. karena pilot sudah di add ke dalam array list sehingga bisa ditemukan lalu ditampilkan atributnya.
+	
+localhost:8080/pilot/view?licenseNumber=1234
+Pertanyaan 4​: apakah data Pilot tersebut muncul? Jika tidak, mengapa?
+jawaban: tidak. karena tidak ada pilot dengan nomor lisensi 1234 didalam arraylist.
+
+localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
+localhost:8080/pilot/viewall
+Pertanyaan 5​: apakah data Pilot tersebut muncul?
+jawaban: ya. karena data pilot sudah terdapat di ArrayList.
+	
+localhost:8080/pilot/viewall
+Pertanyaan 6​: Apakah semua data Pilot muncul?
+jawaban: ya. karena pada view yang akan ditampilkan adalah semua objek yang ada di arraylist.
+
