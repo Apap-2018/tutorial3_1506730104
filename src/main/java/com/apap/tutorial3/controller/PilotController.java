@@ -54,6 +54,7 @@ public class PilotController {
 			model.addAttribute("pilot", archive);
 			return "view-pilot";
 		} else {
+			model.addAttribute("lisensi", licenseNumber);
 			return "error-view-pilot";
 		}
 	}
@@ -65,6 +66,7 @@ public class PilotController {
 			model.addAttribute("pilot", archive);
 			return "view-pilot-updated";
 		} else {
+			model.addAttribute("lisensi", licenseNumber);
 			return "error-update-flyHour";
 		}
 	}
@@ -76,6 +78,7 @@ public class PilotController {
 			model.addAttribute("id", id);
 			return "delete-pilot";
 		} else {
+			model.addAttribute("id", id);
 			return "error-delete-pilot";
 		}
 	}

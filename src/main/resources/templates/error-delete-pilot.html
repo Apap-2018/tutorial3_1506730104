@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
-		<title>Delete Pilot</title>
+		<title>View Detail</title>
 	</head>
 	<body>
-		<h1>Error! id pilot kosong atau tidak ditemukan. Delete dibatalkan...</h1>
+		<h1 th:text="'Error! id pilot: ' + ${id} + ' kosong atau tidak ditemukan. Delete dibatalkan...'"></h1>
 	</body>
 </html>

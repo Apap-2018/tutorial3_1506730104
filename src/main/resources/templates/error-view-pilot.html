@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
-		<title>View Detail</title>
+		<title>Error View Pilot</title>
 	</head>
 	<body>
-		<h1>Error! nomor lisensi kosong atau tidak ditemukan</h1>
+		<h1 th:text="'Error! nomor lisensi: ' + ${lisensi} + ' kosong atau tidak ditemukan'"></h1>
 	</body>
 </html>

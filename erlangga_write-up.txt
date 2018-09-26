@@ -4,27 +4,27 @@ Muhammad Erlangga Rianto
 
 localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
 Pertanyaan 1​: apakah hasilnya? Jika error, tuliskan penjelasan Anda.
-jawaban: muncul halaman yang memberi informasi bahwa "Data Berhasil Ditambahkan". Objek pilot baru sudah dibuat.
+jawaban: Berhasil diakses. Muncul halaman yang memberi informasi bahwa "Data Berhasil Ditambahkan". Objek pilot baru sudah ditambahkan dalam arsip pilot.
 
 localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono
 Pertanyaan 2: ​apakah hasilnya? Jika error, tuliskan penjelasan Anda
-jawaban: muncul pesan error "Required Integer parameter 'flyHour' is not present". Parameter flyHour yang dibutuhkan tidak dipassing ke controller.
+jawaban: Error. Muncul pesan "Required Integer parameter 'flyHour' is not present". Parameter flyHour yang di request tidak diterima oleh controller.
 	
 localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
 localhost:8080/pilot/view?licenseNumber=1234
 Pertanyaan 3​: apakah data Pilot tersebut muncul? Jika tidak, mengapa?
-jawaban: muncul. karena pilot sudah di add ke dalam array list sehingga bisa ditemukan lalu ditampilkan atributnya.
+jawaban: Muncul. Objek pilot dengan nomor lisensi 1234 sudah di ada di dalam arsip pilot sehingga bisa di get lalu ditampilkan atributnya.
 	
 localhost:8080/pilot/view?licenseNumber=1234
 Pertanyaan 4​: apakah data Pilot tersebut muncul? Jika tidak, mengapa?
-jawaban: tidak. karena tidak ada pilot dengan nomor lisensi 1234 didalam arraylist.
+jawaban: Tidak. Objek pilot dengan nomor lisensi 1234 belum pernah ditambahkan dalam arsip pilot.
 
 localhost:8080/pilot/add?id=1&licenseNumber=1234&name=Jono&flyHour=20
 localhost:8080/pilot/viewall
 Pertanyaan 5​: apakah data Pilot tersebut muncul?
-jawaban: ya. karena data pilot sudah terdapat di ArrayList.
+jawaban: Muncul. Objek pilot dengan lisensi 1234 termasuk didalam arsip pilot yang dicetak di viewall-pilot.
 	
 localhost:8080/pilot/viewall
 Pertanyaan 6​: Apakah semua data Pilot muncul?
-jawaban: ya. karena pada view yang akan ditampilkan adalah semua objek yang ada di arraylist.
+jawaban: Ya. di viewall-pilot akan memunculkan each pilot yang ada di arsip pilot.
 
