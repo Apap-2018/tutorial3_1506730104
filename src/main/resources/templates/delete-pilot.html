@@ -4,6 +4,10 @@
 		<title>Delete Pilot</title>
 	</head>
 	<body>
-		<h1 th:text="'pilot dengan id: ' + ${pilot.id} + 'telah dihapus'"></h1>
+		<h3 th:text="${pilot.id}"></h3>
+		<h3 th:text="${pilot.licenseNumber}"></h3>
+		<h3 th:text="${pilot.name}"></h3>
+		<h3 th:text="${pilot.flyHour}"></h3>
+		<h1>Telah dihapus!</h1>
 	</body>
 </html>
