@@ -86,11 +86,17 @@ public class PilotController {
 	@RequestMapping("pilot/delete/id/{id}")
 	public String deletePilot(@PathVariable Optional<String> id, Model model) {
 		if (id.isPresent()) {
-			PilotModel archive = pilotService.deletePilot(id.get());
-			model.addAttribute("id", id);
-			return "delete-pilot";
+			PilotModel dummy = pilotService.deletePilot(id.get());
+			
+			if(dummy == null) {
+				model.addAttribute("id", id.get());
+				return "error-delete-pilot";
+			} else {
+				model.addAttribute("id", id);
+				return "delete-pilot";
+			}
 		} else {
-			model.addAttribute("id", id);
+			model.addAttribute("id", id.get());
 			return "error-delete-pilot";
 		}
 	}

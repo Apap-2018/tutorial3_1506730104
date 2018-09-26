@@ -57,6 +57,8 @@ public class PilotInMemoryService implements PilotService{
 		for(int i = 0; i < archivePilot.size(); i++) {
 			if(archivePilot.get(i).getId().equals(id)) {
 				archivePilot.remove(i);
+				PilotModel dummy = new PilotModel("dummy", "dummy", "dummy", 0);
+				return dummy;
 			}
 		}
 		return null;
